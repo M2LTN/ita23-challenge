@@ -25,7 +25,6 @@ app.get("/meals", async (req, res) => {
       console.error(err);
       return;
     });
-  console.log(JSON.parse(meals));
   res.json(JSON.parse(meals));
 });
 
