@@ -1,5 +1,13 @@
+import '/home/aaron/ita23-challenge/src/components/UI/Button.js'
+import React from 'react';
+import '/home/aaron/ita23-challenge/src/index.css'
+
 const MealItem = (props) => {
+    const handleMealButtonClick = () => {
+        alert('Button clicked in MealItem')};
+
     const europrice = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(props.meal.price);
+    
     return (
         <li className="meal-item">
             <article>
@@ -10,7 +18,7 @@ const MealItem = (props) => {
                     <p className="meal-item-description">{props.meal.description}</p>
                 </div>
                 <p>
-                    <button className="button" >Add to Cart</button>
+                    <button textOnly={false} onClick={handleMealButtonClick} className="button" >Add to Cart</button>
                 </p>
             </article>
         </li>
